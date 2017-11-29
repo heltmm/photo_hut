@@ -23,7 +23,10 @@
     -webkit-border-radius: 25px;
     height: 50px;
     width: 50px;
-    overflow: hidden;
-    text-align: center;
+    overflow: auto;
     img { width: 100% }
+}
+.nav > li ,a {
+  margin: 5px;
+  color: black;
 }

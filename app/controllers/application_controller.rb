@@ -3,6 +3,13 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  def authorize
+    if !current_user
+      flash[:alert] = "You aren't authorized to visit that page."
+      redirect_to '/'
+    end
+  end
+
   protected
   def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password, :is_female, :date_of_birth, :avatar])
