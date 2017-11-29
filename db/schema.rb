@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20171129164752) do
     t.datetime "updated_at", null: false
     t.string "username"
     t.boolean "admin", default: false
+    t.boolean "is_female", default: false
+    t.datetime "date_of_birth"
     t.string "avatar_file_name"
     t.string "avatar_content_type"
     t.integer "avatar_file_size"
