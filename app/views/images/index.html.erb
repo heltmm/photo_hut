@@ -1,1 +1,6 @@
 <h1>home page</h1>
+
+
+<% @images.each do |image|%>
+  <%= image_tag(image.photo) %>
+<%end%>
