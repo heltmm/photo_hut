@@ -5,10 +5,12 @@
 <% if current_user%>
   <h3> Welcome, <%= current_user.username%></h3>
   <% @images.each do |image|%>
-      <%= image_tag(image.photo.url(:thumb)) %>
+  <div class='card bg-light mb-3'>
+    <div class='card-body'>
+      <%= link_to image_tag(image.photo.url(:thumb)), image_path(image) %>
     <br>
     <br>
-    <hr>
+
     <%= image.description %>
     <% image.tags.each do |tag| %>
       <div class='tag'>
@@ -20,7 +22,8 @@
     <%= link_to "Delete", image_path(image), :class => "btn btn-danger",
                            :data => {:confirm => "You sure?",
                                      :method => "delete"} %>
-
+    </div>
+  </div>
   <%end%>
   <% else %>
   <h1>Welcome to PhotoHut</h1>
