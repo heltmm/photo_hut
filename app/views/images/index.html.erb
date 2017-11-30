@@ -14,7 +14,7 @@
     <%= image.description %>
     <% image.tags.each do |tag| %>
       <div class='tag'>
-        @<%= User.find(tag.user_id).username %>
+        @<%= tag.user.username %>
       </div>
     <% end %>
     <%= link_to "Edit Image", edit_image_path(image) %>
