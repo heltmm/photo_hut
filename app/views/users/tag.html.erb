@@ -1,0 +1,18 @@
+<h1>Tagged Photos</h1>
+
+<% @images.each do |image|%>
+<div class='card bg-light mb-3'>
+  <div class='card-body'>
+      <%= link_to image_tag(image.photo.url(:thumb)), image_path(image) %>
+      <br>
+      <br>
+
+      <%= image.description %>
+      <% image.tags.each do |tag| %>
+        <div class='tag'>
+          @<%= tag.user.username %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

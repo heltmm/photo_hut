@@ -1,9 +1,7 @@
 class ImagesController < ApplicationController
    before_action :authorize, only: [:new]
   def index
-    if current_user
-      @images = current_user.images
-    end
+    @images = Image.all
   end
 
   def show

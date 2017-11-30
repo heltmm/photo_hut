@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root :to => 'images#index'
 
   get "profile", to: "users#show"
+  get "tags", to: "users#tag"
 
   resources :images do
     member do
