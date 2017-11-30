@@ -1,0 +1,7 @@
+<%= form_for [@image, @tag] do |f| %>
+
+  <%= f.label "User to Tag" %><br>
+  <% option = options_from_collection_for_select(@users, 'id', 'username') %>
+  <%= f.select :user_id, option %><br><br>
+  <%= f.submit %>
+<% end %>

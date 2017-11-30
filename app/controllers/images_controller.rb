@@ -8,6 +8,7 @@ class ImagesController < ApplicationController
 
   def new
     @image = Image.new
+    @users = User.all
   end
 
   def create
@@ -22,10 +23,12 @@ class ImagesController < ApplicationController
 
   def edit
    @image = Image.find(params[:id])
+   @users = User.all
   end
 
   def update
     @image = Image.find(params[:id])
+    @users = User.all
     if @image.update(image_params)
       flash[:notice] = "Image Updated!"
       redirect_to images_path
