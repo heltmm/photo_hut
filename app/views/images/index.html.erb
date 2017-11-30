@@ -1,8 +1,11 @@
 
-<br>
+
 
 
 <% if current_user%>
+  <div class="digg_pagination">
+    <%= will_paginate @images, :container => false %>
+  </div>
   <h3> Welcome, <%= current_user.username%></h3>
   <% @images.each do |image|%>
   <div class='card bg-light mb-3'>
@@ -19,6 +22,9 @@
     <% end %>
     <%=  link_to('Like', like_image_path(image), :class => "btn btn-info", method: :post) %>
     </div>
+  </div>
+  <div class="digg_pagination">
+    <%= will_paginate @images, :container => false %>
   </div>
   <%end%>
   <% else %>

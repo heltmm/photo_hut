@@ -32,6 +32,7 @@ gem 'faker'
 gem 'paperclip', '~> 4.1'
 gem 'rails_admin'
 gem 'socialization'
+gem 'will_paginate', '~> 3.1.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

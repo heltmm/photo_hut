@@ -1,7 +1,7 @@
 class ImagesController < ApplicationController
    before_action :authorize, only: [:new]
   def index
-    @images = Image.all
+    @images = Image.most_recent.paginate(:page => params[:page], :per_page => 1)
   end
 
   def show
