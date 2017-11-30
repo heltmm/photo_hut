@@ -1,6 +1,8 @@
 class Image < ApplicationRecord
   belongs_to :user
   has_many :tags
+  
+  acts_as_likeable
 
   validates :photo, :presence => true
 

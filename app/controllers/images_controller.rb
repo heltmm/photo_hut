@@ -48,6 +48,12 @@ class ImagesController < ApplicationController
     redirect_to images_path
   end
 
+  def like
+    image = Image.find(params[:id])
+    current_user.like!(image)
+    redirect_to images_path
+  end
+
   private
   def image_params
     params.require(:image).permit(:description, :photo, :user_id)

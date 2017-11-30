@@ -10,7 +10,7 @@
       <%= link_to image_tag(image.photo.url(:thumb)), image_path(image) %>
     <br>
     <br>
-
+    <%= image.likers_count %>
     <%= image.description %>
     <% image.tags.each do |tag| %>
       <div class='tag'>
@@ -22,6 +22,10 @@
     <%= link_to "Delete", image_path(image), :class => "btn btn-danger",
                            :data => {:confirm => "You sure?",
                                      :method => "delete"} %>
+
+
+      <%=  link_to('Like', like_image_path(image), :class => "btn btn-info", method: :post) %>
+
     </div>
   </div>
   <%end%>

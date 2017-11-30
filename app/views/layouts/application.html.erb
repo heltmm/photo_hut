@@ -10,21 +10,30 @@
 
   <body>
 
-  <div class="navbar navbar-expand-lg navbar-light bg-secondary">
-      <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'Home', '/' %></li>
-          <% if current_user %>
-          <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
-          <li><%= link_to 'Profile', profile_path %></li>
-          <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to 'Add New Photo', new_image_path %></li>
-          <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
 
-          <% else %>
-          <li><%= link_to 'Login', new_user_session_path %></li>
-          <% end %>
-      </ul>
-    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <% if current_user %>
+        <a class="navbar-brand round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></a>
+      <% end %>
+      <a class="navbar-brand"><%= link_to 'Home', '/' %></a>
+      <a class="navbar-brand"><%= link_to 'Add New Photo', new_image_path %></a>
+      <a class="navbar-brand"><%= link_to 'Profile', profile_path %></a>
+
+
+      <% if current_user %>
+        <a class="navbar-brand"><%= link_to 'Edit Profile',edit_user_registration_path %></a>
+        <a class="navbar-brand  ml-auto"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></a>
+      <% else %>
+        <a class="navbar-brand ml-auto"><%= link_to 'Login', new_user_session_path %></a>
+
+      <% end %>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
 
     <div>
         <%= flash[:notice] %>

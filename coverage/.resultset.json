@@ -1,13 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/photo_hut/spec/models/image_spec.rb": [
+      "/Users/Guest/Desktop/photo_hut/spec/mailers/user_mailer_spec.rb": [
         1,
         null,
         1,
-        null,
-        2,
-        2,
+        1,
         null
       ],
       "/Users/Guest/Desktop/photo_hut/spec/rails_helper.rb": [
@@ -516,6 +514,53 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/photo_hut/config/initializers/rails_admin.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/photo_hut/config/initializers/wrap_parameters.rb": [
         null,
         null,
@@ -538,6 +583,10 @@
         1,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
         1,
         null,
         null
@@ -545,6 +594,7 @@
       "/Users/Guest/Desktop/photo_hut/app/models/user.rb": [
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -553,6 +603,11 @@
         null,
         1,
         1,
+        null,
+        1,
+        null,
+        1,
+        0,
         null,
         null,
         null
@@ -573,6 +628,10 @@
         0,
         0,
         null,
+        null,
+        null,
+        1,
+        0,
         null,
         null,
         1,
@@ -663,6 +722,10 @@
         1,
         0,
         0,
+        null,
+        0,
+        0,
+        null,
         0,
         null,
         null,
@@ -693,6 +756,17 @@
         null,
         1,
         1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/photo_hut/app/controllers/users_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        0,
         0,
         null,
         null,
@@ -708,9 +782,19 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/photo_hut/app/mailers/user_mailer.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/photo_hut/app/models/image.rb": [
         1,
         1,
+        1,
+        null,
         1,
         null,
         null,
@@ -723,6 +807,8 @@
         1,
         1,
         1,
+        null,
+        1,
         null
       ],
       "/Users/Guest/Desktop/photo_hut/spec/factories/users.rb": [
@@ -732,12 +818,24 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/photo_hut/spec/models/image_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        2,
+        2,
+        2,
+        null
+      ],
       "/Users/Guest/Desktop/photo_hut/spec/models/tag_spec.rb": [
         1,
         null,
         1,
         null,
         2,
+        2,
+        null,
         2,
         null
       ],
@@ -749,6 +847,6 @@
         null
       ]
     },
-    "timestamp": 1512062260
+    "timestamp": 1512071612
   }
 }
