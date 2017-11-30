@@ -14,7 +14,9 @@ User.create(username: "aGuy",
             email: "test@gmail.com",
             password: "password",
             is_female: true,
-            date_of_birth: Date.new)
+            date_of_birth: Date.new,
+            admin: true)
+
 User.create(username: "aChinChilla",
             email: "test2@gmail.com",
             password: "password",
