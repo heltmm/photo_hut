@@ -4,6 +4,10 @@ class TagsController < ApplicationController
   def new
     @users = User.all
     @image = Image.find(params[:image_id])
+
+    @image.tags.each do |tag|
+      @users -= [User.find(tag.user_id)]
+    end
     @tag = @image.tags.new
   end
 
