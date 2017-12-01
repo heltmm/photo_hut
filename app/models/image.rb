@@ -20,4 +20,6 @@ class Image < ApplicationRecord
    .group("images.id")
    .order("likes_count DESC")
    )}
+
+   scope :search, -> (search_parameter, page) { joins(:user).where("lower(users.username) like lower(?)", "%#{search_parameter}%").paginate(:page => page, :per_page => 1)}
 end

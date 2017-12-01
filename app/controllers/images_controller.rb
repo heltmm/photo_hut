@@ -2,6 +2,7 @@ class ImagesController < ApplicationController
    before_action :authorize, only: [:new]
   def index
     @images = Image.most_recent.paginate(:page => params[:page], :per_page => 1)
+    @images = Image.search(params[:search], params[:page]) if params[:search].present?
   end
 
   def show

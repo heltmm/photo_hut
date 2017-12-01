@@ -18,4 +18,6 @@ class User < ApplicationRecord
     UserMailer.send_new_user_message(self).deliver
   end
 
+  
+
 end
