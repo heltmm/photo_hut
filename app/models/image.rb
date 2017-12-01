@@ -14,12 +14,10 @@ class Image < ApplicationRecord
 
   scope :most_recent, -> { order(created_at: :desc)}
 
-  scope :most_likes, -> {(
-   select("images.id, images.description, images.photo_file_name, images.photo_content_type, images.photo_file_size, images.photo_updated_at, images.likers_count, count(likes.id) as likes_count")
-   .joins(:likes)
-   .group("images.id")
-   .order("likes_count DESC")
-   )}
+  scope :oldest, -> { order(created_at: :asc)}
 
-   scope :search, -> (search_parameter, page) { joins(:user).where("lower(users.username) like lower(?)", "%#{search_parameter}%").paginate(:page => page, :per_page => 1)}
+  scope :most_liked, -> { order(likers_count: :desc)}
+
+
+ scope :search, -> (search_parameter, page) { joins(:user).where("lower(users.username) like lower(?)", "%#{search_parameter}%").paginate(:page => page, :per_page => 1)}
 end

@@ -289,7 +289,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap (~> 4.0.0.beta2.1)
+  bootstrap
   byebug
   capybara
   coffee-rails (~> 4.2)

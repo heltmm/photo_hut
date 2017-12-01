@@ -3,10 +3,24 @@
 
 
 <% if current_user%>
+  <h3> Welcome, <%= current_user.username%></h3>
   <div class="digg_pagination">
     <%= will_paginate @images, :container => false %>
   </div>
-  <h3> Welcome, <%= current_user.username%></h3>
+
+
+  <div class="dropdown">
+    Filter By:
+    <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Most Recent
+    </button><br><br>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="?order=recent">Most Recent</a>
+      <a class="dropdown-item" href="?order=oldest">Oldest</a>
+      <a class="dropdown-item" href="?order=most_liked">Most Liked</a>
+    </div>
+  </div>
+
   <% @images.each do |image|%>
   <div class='card bg-light mb-3'>
     <div class='card-body'>

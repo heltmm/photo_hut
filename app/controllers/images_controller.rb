@@ -3,6 +3,9 @@ class ImagesController < ApplicationController
   def index
     @images = Image.most_recent.paginate(:page => params[:page], :per_page => 1)
     @images = Image.search(params[:search], params[:page]) if params[:search].present?
+    @images = Image.most_recent.paginate(:page => params[:page], :per_page => 1) if params[:order]==="recent"
+    @images = Image.oldest.paginate(:page => params[:page], :per_page => 1) if params[:order]==="oldest"
+    @images = Image.most_liked.paginate(:page => params[:page], :per_page => 1) if params[:order]==="most_liked"
   end
 
   def show
